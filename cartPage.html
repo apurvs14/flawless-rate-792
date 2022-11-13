@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+     #cart-container{
+        display: grid;;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+        width: 90%;
+        margin: auto;
+    }
+    #cart-container>div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+    }
+
+    #cart-container>div>img{
+        width: 100%;
+    }
+
+    .nav{
+
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 20px;
+    align-items: center;
+    }
+
+    .nav>a{
+        font-size: 30px;
+        margin-left: 20px;
+        background-color: bisque;
+        padding: 10px;
+        color: black;
+    }
+
+    h1{
+
+    text-align: center;
+    }
+    button{
+
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    margin-left: 5px;
+    /* margin-left: 35%; */
+    }
+    span{
+    margin-left: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>G L A M S H E</h1>
+        <a href="./productPage.html">Products</a>
+        <a href="./home.html">Home</a>
+      </div>
+      <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+      <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+      </div>
+</body>
+<script>
+    // Write all necessery JS here 
+
+    let ls_data = JSON.parse(localStorage.getItem("seph"));
+
+    let total_price =+(ls_data.reduce((acc,elem)=>{
+
+
+        return acc + (+(elem.price));
+        },0)) 
+
+    document.querySelector("#total").innerText= "Your Total cart Price is:-" + total_price;
+
+    function displayData(allData){
+      
+      document.querySelector("#cart-container").innerHTML = null;
+      
+      allData.forEach((element,index) => {
+      
+      let div1 = document.createElement("div");
+      
+
+      let image_tag = document.createElement("img");
+      image_tag.src = element.link;
+
+      let title_tag  = document.createElement("h2");
+      title_tag.innerText = element.title;
+
+      let price_tag = document.createElement("h3");
+      price_tag.innerText = element.price;
+
+      let des = document.createElement("h3");
+      des.innerText = element.desc;
+      
+      let cat = document.createElement("h3");
+      cat.innerText = element.category;
+      
+      let off = document.createElement("h3");
+      off.innerText = element.offer;
+
+      let add_btn = document.createElement("button");
+      add_btn.innerText ="+";
+      add_btn.addEventListener("click",function(){
+        span_tag.innerText = +(span_tag.innerText)+1;
+
+        total_price = +(total_price + (+element.price));
+        document.querySelector("#total").innerText= "Your Total cart Price is:-" + total_price;
+
+      })
+
+      let span_tag = document.createElement("span");
+      span_tag.innerText = "1";
+
+      let rem_btn = document.createElement("button");
+      rem_btn.innerText ="-";
+      rem_btn.addEventListener("click",function(){
+
+        span_tag.innerText = +(span_tag.innerText)-1;
+
+        if(span_tag.innerText==0){
+
+          allData.splice(index,1);
+          localStorage.setItem("seph",JSON.stringify(allData));
+          displayData(allData);
+        }
+
+        total_price = +(total_price - (+(element.price)));
+        document.querySelector("#total").innerText= "Your Total cart Price is:-" + total_price;
+
+      })
+
+      let remove_b = document.createElement("button");
+      remove_b.innerText ="Remove";
+      remove_b.addEventListener("click",function(){
+        allData.splice(index,1);
+          localStorage.setItem("seph",JSON.stringify(allData));
+          displayData(allData);
+      })
+
+
+      div1.append(image_tag,title_tag,price_tag,des,cat,off,add_btn,span_tag,rem_btn,remove_b)
+
+      document.querySelector("#cart-container").append(div1);
+
+      });
+      
+    }
+    displayData(ls_data)
+  </script>
+</html>

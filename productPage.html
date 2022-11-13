@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G L A M S H E Exclusive Products</title>
+    <style>
+         #topbar{
+            background-color: rgb(184, 231, 250);
+            height: 50px;
+            padding: 10px;
+            margin-top: -20px;
+            text-align: center;
+        }
+        
+        #navbar{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+
+        #navbar>input{
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            width: 400px;
+        }
+        #selectBar{
+
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            color: white;
+        }
+        #selectBar>a{
+            color: white;
+            padding: 10px;
+        }
+
+        #product-container{
+
+        display: grid;;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        }
+
+        #product-container>div>img{
+
+        width: 100%;
+        }
+
+        #product-container>div{
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 10px;
+
+        }
+        button{
+
+        padding: 10px;
+        background-color: grey;
+        color: white;
+        margin-left: 35%;
+        border: 0px;;
+        }
+
+        #navbar>a{
+            font-size: 15px;
+            margin-left: 20px;
+            background-color: bisque;
+            padding: 10px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="topbar">
+        <h3>Get Free shipping on all orders when you join Beauty Insider,Exclusions/terms apply. <b>LEARN MORE</b></h3>
+    </div>
+    <div id="navbar">
+        <h2>G L A M S H E</h2>
+        <input type="text" id="search" placeholder="search">
+        <a href="./home.html">Home</a>
+        <a href="./cartPage.html">Cart</a>
+    </div>
+    <div id="selectBar">
+        <a href="">New</a>
+        <a href="">Brands</a>
+        <a href="">Makeup</a>
+        <a href="">Skincare</a>
+        <a href="">Hair</a>
+        <a href="">Frangrance</a>
+        <a href="">Tools & Brushes</a>
+        <a href="">Bath & Body</a>
+        <a href="">Mini Size</a>
+        <a href="">Gifts</a>
+        <a href="">Beauty Under $20</a>
+        <a href="">Sale & Offers</a>
+    </div>
+    <div id="product-container">
+        <!-- append the data here -->
+    </div>
+</body>
+</html>
+<script>
+    let url = "https://636b29f3c07d8f936daf511e.mockapi.io/newroduct";
+
+    let productData=null;
+
+    async function fetchdata(){
+    try {
+        productData = await fetch(url).then((res)=>res.json())
+        displayData(productData)
+    } catch (error) {
+        console.log(error)
+    }
+    }
+    
+    function displayData(allData){
+      
+      document.querySelector("#product-container").innerHTML = null;
+      
+      allData.forEach((element,index) => {
+      
+      let div1 = document.createElement("div");
+      
+
+      let image_tag = document.createElement("img");
+      image_tag.src = element.link;
+
+      let title_tag  = document.createElement("h2");
+      title_tag.innerText = element.title;
+
+      let price_tag = document.createElement("h3");
+      price_tag.innerText = element.price;
+
+      let des = document.createElement("h3");
+      des.innerText = element.desc;
+      
+      let cat = document.createElement("h3");
+      cat.innerText = element.category;
+      
+      let off = document.createElement("h3");
+      off.innerText = element.offer;
+
+      let btn = document.createElement("button");
+      btn.innerText ="Add To Cart";
+      btn.addEventListener("click",function(){
+
+        Addcart(element);
+      })
+
+      div1.append(image_tag,title_tag,price_tag,des,cat,off,btn)
+
+      document.querySelector("#product-container").append(div1);
+
+      });
+      
+    }
+
+    function Addcart(element){
+
+      let ls_data = JSON.parse(localStorage.getItem("seph")) || [];
+      let flag = "no";
+      for (let i = 0;i<ls_data.length;i++){
+
+        if(element.id==ls_data[i].id){
+          flag = "yes"
+          break;
+        }
+
+      }
+
+      if(flag == "yes"){
+        alert("Product Already in Cart")
+
+      }else{
+        ls_data.push(element);
+        localStorage.setItem("seph",JSON.stringify(ls_data))
+        alert("Product Added To Cart")
+      }
+    }
+
+    fetchdata()
+</script>

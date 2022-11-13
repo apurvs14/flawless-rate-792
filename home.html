@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G L A M S H E</title>
+    <style>
+        #topbar{
+            background-color: rgb(184, 231, 250);
+            height: 50px;
+            padding: 10px;
+            margin-top: -20px;
+            text-align: center;
+        }
+        
+        #navbar{
+
+            
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+
+        #navbar>input{
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            width: 400px;
+        }
+        #selectBar{
+
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            color: white;
+        }
+
+        #selectBar>a{
+            color: white;
+            padding: 10px;
+        }
+        #SippingDelayed{
+
+            background-color: rgb(241, 234, 234);
+            color: black;
+            padding: 5px;
+            height: auto;
+            /* font-size: 30px; */
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #Slideshow{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin-top: 50px;
+            /* height: 600px; */
+           
+            
+        }
+        #Slideshow>div>img{
+            width: 100%;
+            /* height: 70%; */
+        }
+
+
+
+        .chosen{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 15px;                                           
+        }
+
+        .chosen>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+            
+        }
+        .chosen>div>img{
+            width: 100%;
+        }
+
+        .beauty{
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;               
+        }
+
+        .beauty>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+            
+        }
+        .beauty>div>img{
+            width: 100%;
+        }
+
+        .beauty>div>button{
+            padding: 10px;
+            background-color: transparent;
+            border-radius: 50px;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .volume{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            margin: auto;
+            width: 80%;
+            height: auto;
+            margin-top: 100px;
+        }
+        .volume>a{
+            font-size: 15px;
+            color: black;
+        }
+
+        .volume>div{
+            background-color: peachpuff;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            
+        }
+        .volume>div>img{
+            width: 100%;
+        }
+        
+        .small_cards{
+            width: 80%;
+            margin: auto;
+            height: auto;
+            /* border: 2px solid black; */
+            display: flex;
+            margin-top: 100px;
+        }
+        .grids{
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            gap: 5px;
+           
+        }
+        .grids>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: auto;
+            padding: 5px;
+        }
+        .texts{
+            text-align: left;
+            width: 30%;
+        }
+        .grids>div>img{
+            width: 40%;
+            height: 40%;
+        
+        }
+        .heads{
+            margin-left: 10%;;
+        }
+        .bottom{
+            background-color: rgb(184, 179, 179);
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 40px;
+            padding: 10px;
+        }
+        #navbar>a{
+            font-size: 15px;
+            margin-left: 20px;
+            background-color: bisque;
+            padding: 10px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="topbar">
+        <h3>Get Free shipping on all orders when you join Beauty Insider,Exclusions/terms apply. <b>LEARN MORE</b></h3>
+    </div>
+    <div id="navbar">
+        <h2>G L A M S H E</h2>
+        <input type="text" id="search" placeholder="search">
+        <a href="./productPage.html">Products</a>
+        <a href="./cartPage.html">Cart</a>
+    </div>
+    <div id="selectBar">
+        <a href="">New</a>
+        <a href="">Brands</a>
+        <a href="">Makeup</a>
+        <a href="">Skincare</a>
+        <a href="">Hair</a>
+        <a href="">Frangrance</a>
+        <a href="">Tools & Brushes</a>
+        <a href="">Bath & Body</a>
+        <a href="">Mini Size</a>
+        <a href="">Gifts</a>
+        <a href="">Beauty Under $20</a>
+        <a href="">Sale & Offers</a>
+    </div>
+    <div id="SippingDelayed">
+        <p><b>Shipping is delayed due to high demand.Need it sooner?Buy Online,Pick up In Store or get Same-Day delivery</b></p>
+    </div>
+    <div id="Slideshow">
+        <div>
+            <img src="https://www.sephora.com/contentimages/2022-fragrance-q4-site-home-page-rwd-hero-banner-holiday-value-sets-75-under-us-01..jpg?imwidth=630" alt="">
+            <h3>Fragrance Gifts $75 & Under</h3>
+            <p>Sets for everyone on your list (including you!)</p>
+            <a href="">SHOP NOW</a>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/2022-11-29-stock-up-on-dior-site-desktop-mweb-home-page-rwd-hero-banner-1000x750-en-us-can.jpg?imwidth=1090" alt="">
+            <h3>Best Of Dior</h3>
+            <p>Luxe beauty for everyone on your list.</p>
+            <a href="">SHOP NOW</a>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/2022-holiday-launch-general-site-desktop-home-page-hero-banner-rwd-v1-product-us-release-1000x750.jpg?imwidth=630" alt="">
+            <h3>Value Sets? obsessed!</h3>
+            <p>Limited edition and packed full of products fun to give,even better to get.</p>
+            <a href="">SHOP NOW</a>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/2022-10-29-slotting-just-arrived-v2-standard-site-responsive-home-page-hero-banner-4-product-US-CA-handoff_01.jpg?imwidth=630" alt="">
+            <h3>In With the New</h3>
+            <p>The Latest beauty from the hottest brands.</p>
+            <a href="">SHOP NOW</a>
+        </div>
+    </div>
+    <h2 class="heads">Chosen for you</h2>
+     <div class="chosen">
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2518959-main-zoom.jpg?pb=allure-2022-bestofbeauty-badge&imwidth=244" alt="">
+            <p><b>Rare beauty</b></p>
+            <p>Soft Pinch Liquid Blush</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2617744-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>HUDA BEAUTY</b></p>
+            <p>Empowered Eyeshadow Palette</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2619252-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>Sol de janerio</b></p>
+            <p>Bum Bum Beats Body Care Set</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2419786-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>Charlotte Tilbury</b></p>
+            <p>Hollywood Flawless filter</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2333771-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=244" alt="">
+            <p><b>Kosas</b></p>
+            <p>Revealer Super Creamy</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2619146-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>Charlotte Tilbury</b></p>
+            <p>Pillowtalk Beautifying Lip set</p>
+        </div>
+     </div>
+
+    <h2 class="heads">Just Dropped</h2>
+    <div class="chosen">
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2617744-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>HUDA BEAUTY</b></p>
+            <p>Empowered Eyeshadow Palette</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2579845-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=244" alt="">
+            <p><b>SEPHORA COLLECTION</b></p>
+            <p>Wishing you Face Mask Magic</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2532729-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>Augustinus Bader</b></p>
+            <p>The Eyebrow & Lash Enhancing Serum</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2619096-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>PAT McGRATH LABS</b></p>
+            <p>Celestial Nirvana</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2608727-main-zoom.jpg?pb=allure-2022-bestofbeauty-badge&imwidth=244" alt="">
+            <p><b>necessaire</b></p>
+            <p>The Conditioner Hydrating Cream</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2625374-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>Peter Thomas Roth</b></p>
+            <p>Full-Sized Eye-Conic Hydra-Gel Patvhes</p>
+        </div>
+    </div>
+    <h2 class="heads">Beauty Offers(7)</h2>
+    <div class="beauty">
+        <div>
+            <img src="https://www.sephora.com/contentimages/promo/beautyoffers/2022/November/2022-fragrance-q4-site-beauty-offers-banner-1000x750-smgm-us-khols.jpg?imwidth=480" alt="">
+            <p><b>Spend More, Get More Fragrance</b></p>
+            <p>Get 1 mini with $45 product purchase, 2 minis with $75 product purchase, or 3 minis with $105 product purchase.</p>
+            <p>Beauty Insider members only.</p>
+            <p>Online only</p>
+            <p>*Exclusions/terms apply. While supplies last.</p>
+            <button>Apply</button>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/promo/beautyoffers/2022/November/percent-off-basket-app-content-card-promo.png?imwidth=480" alt="">
+            <p><b>Get 10% off Your Next Purchase</b></p>
+            <p>When you sign up for text updates.3 minis with $105 product purchase </p>
+            <p>Beauty Insider members only.</p>
+            <p>In store & online - Ends 1/23/2023</p>
+            <p>*Exclusions/terms apply</p>
+            <button>Learn More</button>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/promo/beautyoffers/2022/November/2022-11-12-slotting-promo-app-beauty-offers-banner-PATTERN-us-ca-handoff.jpg?imwidth=480" alt="">
+            <p><b>Ready. Set. Save</b></p>
+            <p>Get 30% off Pattern by trace ellis Ross</p>
+            <p>Beauty Insider members only.</p>
+            <p>In store & online - Ends 12/13/2022</p>
+            <p>*Exclusions/terms apply</p>
+            <button>Shop Now</button>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/promo/beautyoffers/2022/October/2022-10-24-slotting-promo-app-beauty-offers-banner-STRONGERHAIR-us-handoff.jpg?imwidth=480" alt="">
+            <p><b>Choose 2 Complimentary Hair-Care Trial Sizes</b></p>
+            <p>Pick 2 trial sizes for stronger hair from Olaplex, Virtue, Briogeo, or Christohpe Robin.</p>
+            <p>Complimentary with $35 purchase.* <br> Beauty Insider members only.</p>
+            <p>Online only</p>
+            <button>Apply</button>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/contentimages/promo/beautyoffers/2022/October/2022-10-27-black-owned-brands-site-desktop-mobile-app-beauty-offers-page-banner-en-us.jpg?imwidth=480" alt="">
+            <p><b>Free Danessa Myricks Beauty Trial Size</b></p>
+            <p>Cut back on shine with the bestselling Yummy Skin Blurring Balm Powder.</p>
+            <p>Free with $25 purchase.*</p>
+            <p>Beauty Insider members only.</p>
+            <p>*Exclusions/terms apply</p>
+            <button>Apply</button>
+        </div>
+    </div>
+    <div class="volume">
+        <div>
+            <h3>Charlotte Tilbury's Greatest Hits</h3>
+            <p>Must-Have makeup from a beauty icon</p>
+            <a href="">SHOP NOW</a>
+                <img src="https://www.sephora.com/contentimages/2022-11-9-charlotte-tilbury-holiday-collection-site-desktop-mweb-home-page-rwd-marketing-banner-bestsellers-800x256-en-us-can.jpg?imwidth=800" alt="">
+        </div>
+        <div>
+            <h3>New Oribe Lust Gift Set</h3>
+            <p>Luxe hair for major hydration</p>
+            <a href="">SHOP NOW</a>
+            <img src="https://www.sephora.com/contentimages/2022-11-8-oribe-holiday-sets-site-desktop-mweb-home-page-rwd-marketing-banner-800x256-en-us.jpg?imwidth=800" alt="">
+        </div>
+        <div>
+            <h3>Gift Sets Under $15</h3>
+            <p>Prep for the with must have presets with all</p>
+            <a href="">SHOP NOW</a>
+            <img src="https://www.sephora.com/contentimages/2022-11-1-sc-sku-site-desktop-mweb-home-page-rwd-marketing-banner-launch-3-800x256-en-us-can.jpg?imwidth=800" alt="">
+        </div>
+    </div>
+    <h2 class="heads">Selling Fast</h2>
+    <div class="chosen">
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2311884-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=244" alt="">
+            <p><b>SEPHORA COLLECTION</b></p>    
+            <p>Clean Foundation Brush</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2620839-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>Grande Cosmetics</b></p>
+            <p>First Class Beauty</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2619252-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>Augustinus Bader</b></p>
+            <p>The Eyebrow & Lash Enhancing Serum</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2382232-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=332" alt="">
+            <p><b>PAT McGRATH LABS</b></p>
+            <p>Celestial Nirvana</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2417145-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>necessaire</b></p>
+            <p>The Conditioner Hydrating Cream</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2579902-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=332" alt="">
+            <p><b>Sephora Collection</b></p>
+            <p>Full-Sized Eye-Conic Hydra-Gel Patvhes</p>
+        </div>
+    </div>
+    <h2 class="heads">Beauty Insider Rewards</h2>
+    <p class="heads">Sign in to redeem your points.</p>
+    <div class="chosen">
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2392140-main-zoom.jpg?imwidth=244" alt="">
+            <p><b>SEPHORA COLLECTION</b></p>    
+            <p>Clean Foundation Brush</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s1863588-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=244" alt="">
+            <p><b>Grande Cosmetics</b></p>
+            <p>First Class Beauty</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2097400-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>Augustinus Bader</b></p>
+            <p>The Eyebrow & Lash Enhancing Serum</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2382232-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=332" alt="">
+            <p><b>PAT McGRATH LABS</b></p>
+            <p>Celestial Nirvana</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2417145-main-zoom.jpg?imwidth=332" alt="">
+            <p><b>necessaire</b></p>
+            <p>The Conditioner Hydrating Cream</p>
+        </div>
+        <div>
+            <img src="https://www.sephora.com/productimages/sku/s2579902-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=332" alt="">
+            <p><b>Sephora Collection</b></p>
+            <p>Full-Sized Eye-Conic Hydra-Gel Patvhes</p>
+        </div>
+    </div>
+    <div class="small_cards">
+        <div class="texts">
+            <h3>Featured Categories</h3>
+            <p>Shop what's popular now.</p>
+        </div>
+        <div class="grids">
+            <div>
+                <p>Gifts & value sets</p>
+                <img src="https://www.sephora.com/contentimages/homepage/092022/Homepage/RWD/gifts%2032@3x.png?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Luxe Skin</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/luxury_beauty.svg" alt="">
+            </div>
+            <div>
+                <p>Makeup Under $25</p>
+                <img src="https://www.sephora.com/contentimages/homepage/100422/Homepage/RWD/under25%2032@3x.jpg?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Mosturizers</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Hair styling treatments</p>
+                <img src="https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Perfume</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Sephora Collection</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_sephoracollection_SC_us_ca_rwd_slice.jpg?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Jumbos</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=106" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="small_cards">
+        <div class="texts">
+            <h3>Need a Little Guidance?</h3>
+            <p>Check out our quizzes and buying guides.</p>
+        </div>
+        <div class="grids">
+            <div>
+                <p>Gifting quiz</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/gift_finder.svg" alt="">
+            </div>
+            <div>
+                <p>Clean Beauty</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/clean_guide.svg" alt="">
+            </div>
+            <div>
+                <p>Foundation Quiz</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/foundation_guide.svg" alt="">
+            </div>
+            <div>
+                <p>Skincare Routine Builder</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/skincare_age.svg" alt="">
+            </div>
+            <div>
+                <p>Shiny Hair Guide</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_healthy%20scalp%20guide_us_ca_rwd_slice.png?imwidth=96" alt="">
+            </div>
+            <div>
+                <p>Fragrance Hub</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/niche_fragrances.svg" alt="">
+            </div>
+            <div>
+                <p>Clinical Skincare</p>
+                <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/skincare_quiz.svg" alt="">
+            </div>
+            <div>
+                <p>Black-Owned Brands</p>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_BOB_us_rwd_slice.png?imwidth=106" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="volume">
+        <div>
+            <h3>Our commitment to Diversity,Equity & Inclusion</h3>
+            <a href="">LEARN MORE-</a>
+                <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/homepage-reassurance-banner-diversity-inclusion-desktop-mobile-us-ca-slice.jpeg?imwidth=630" alt="">
+        </div>
+        <div>
+            <h3>Get Your Gifts in Time</h3>
+            <p>Fast and easy options for stress-free holiday shopping.</p>
+            <a href="">LEARN MORE-</a>
+            <img src="https://www.sephora.com/contentimages/2022-holiday-launch-site-desktop-mobile-home-page-rwd-marketing-banner-bottom-banner-ease-and-convenience-800x256-us-can.jpg?imwidth=630" alt="">
+        </div>
+        <div>
+            <h3>Clean+ Planet Positive</h3>
+            <p>Brands ona mission to change your skin and the earth</p>
+            <a href="">LEARN MORE-</a>
+            <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/homepage-reassurance-banner-clean-planet-positive-desktop-mobile-us-ca-slice.jpeg?imwidth=630" alt="">
+        </div>
+    </div>
+    <div class="bottom">
+       <b>Website feedback?  Let us know -</b> 
+    </div>
+</body>
+</html>
